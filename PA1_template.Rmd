@@ -4,10 +4,15 @@ output: html_document
 ---
 <p align="center"> *Author: PG* </p>
 
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.path='figure/')
+setwd("C:/Users/Paula/Documents/Coursera/5-ReproducibleResearch/Assessment_1/RepData_PeerAssessment1/")
+library(knitr)
+```
 
 ##**Loading and preprocesing the data**
 ```{r Loading and preprocesing data}
-data<- read.csv("RepData_PeerAssessment1/activity.csv") #Reading the data
+data<- read.csv("activity.csv") #Reading the data
 head(data, 3) #Exploring the data
 good<- complete.cases(data) #Removing rows with missing values
 data<- data[!good==FALSE, ]
