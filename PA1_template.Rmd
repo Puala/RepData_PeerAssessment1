@@ -7,7 +7,7 @@ output: html_document
 
 ##**Loading and preprocesing the data**
 ```{r Loading and preprocesing data}
-data<- read.csv("activity.csv") #Reading the data
+data<- read.csv("RepData_PeerAssessment1/activity.csv") #Reading the data
 head(data, 3) #Exploring the data
 good<- complete.cases(data) #Removing rows with missing values
 data<- data[!good==FALSE, ]
